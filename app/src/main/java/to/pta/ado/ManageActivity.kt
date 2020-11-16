@@ -1,8 +1,6 @@
 package to.pta.ado
 
 import android.os.Bundle
-import android.util.Log
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -16,7 +14,7 @@ class ManageActivity: AppCompatActivity() {
         val fragmentManager = supportFragmentManager
         fragmentManager
                 .beginTransaction()
-                .add(R.id.fragment_container, ValuesFragment())
+                .add(R.id.fragment_container, ManageQuestionsFragment())
                 .commit()
 
         val bottomNavigation = findViewById<BottomNavigationView>(R.id.bottom_navigation)
@@ -24,7 +22,7 @@ class ManageActivity: AppCompatActivity() {
 
             val fragmentTransaction = fragmentManager.beginTransaction()
             val fragment = when(item.itemId) {
-                R.id.navigate_manage_values -> ValuesFragment()
+                R.id.navigate_manage_values -> ManageQuestionsFragment()
                 R.id.navigate_manage_stats -> StatsFragment()
                 R.id.navigate_manage_settings -> SettingsFragment()
                 else -> return@setOnNavigationItemSelectedListener false

@@ -3,16 +3,16 @@
     <item
         android:id="@+id/navigate_manage_values"
         android:enabled="true"
-        android:icon="@drawable/abc_vector_test"
-        android:title="Values"/>
+        android:icon="@drawable/ic_baseline_question_answer_24"
+        android:title="@string/bottom_navigation_questions"/>
     <item
         android:id="@+id/navigate_manage_stats"
         android:enabled="true"
-        android:icon="@drawable/abc_vector_test"
-        android:title="Statistics"/>
+        android:icon="@drawable/ic_baseline_bar_chart_24"
+        android:title="@string/bottom_navigation_statistics"/>
     <item
         android:id="@+id/navigate_manage_settings"
         android:enabled="true"
-        android:icon="@drawable/abc_vector_test"
-        android:title="Settings"/>
+        android:icon="@drawable/ic_baseline_app_settings_alt_24"
+        android:title="@string/bottom_navigation_settings"/>
 </menu>

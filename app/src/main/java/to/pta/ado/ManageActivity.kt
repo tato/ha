@@ -16,41 +16,26 @@ class ManageActivity: AppCompatActivity() {
         setSupportActionBar(findViewById(R.id.toolbar))
 
         val fragmentManager = supportFragmentManager
-        run {
-            val fragmentTransaction = fragmentManager.beginTransaction()
-            val fragment = ValuesFragment()
-            fragmentTransaction.add(R.id.fragment_container, fragment)
-            fragmentTransaction.commit()
-        }
+        fragmentManager
+                .beginTransaction()
+                .add(R.id.fragment_container, ValuesFragment())
+                .commit()
 
         val bottomNavigation = findViewById<BottomNavigationView>(R.id.bottom_navigation)
         bottomNavigation.setOnNavigationItemSelectedListener { item ->
-            when(item.itemId) {
-                R.id.navigate_manage_values -> {
-                    val fragmentTransaction = fragmentManager.beginTransaction()
-                    val fragment = ValuesFragment()
-                    fragmentTransaction.replace(R.id.fragment_container, fragment)
-                    fragmentTransaction.commit()
-                    true
-                }
-                R.id.navigate_manage_stats -> {
-                    val fragmentTransaction = fragmentManager.beginTransaction()
-                    val fragment = StatsFragment()
-                    fragmentTransaction.replace(R.id.fragment_container, fragment)
-                    fragmentTransaction.commit()
-                    true
-                }
-                R.id.navigate_manage_settings -> {
-                    val fragmentTransaction = fragmentManager.beginTransaction()
-                    val fragment = SettingsFragment()
-                    fragmentTransaction.replace(R.id.fragment_container, fragment)
-                    fragmentTransaction.commit()
-                    true
-                }
-                else -> {
-                    false
-                }
+
+            val fragmentTransaction = fragmentManager.beginTransaction()
+            val fragment = when(item.itemId) {
+                R.id.navigate_manage_values -> ValuesFragment()
+                R.id.navigate_manage_stats -> StatsFragment()
+                R.id.navigate_manage_settings -> SettingsFragment()
+                else -> return@setOnNavigationItemSelectedListener false
             }
+
+            fragmentTransaction.replace(R.id.fragment_container, fragment)
+            fragmentTransaction.commit()
+
+            true
         }
     }
 }

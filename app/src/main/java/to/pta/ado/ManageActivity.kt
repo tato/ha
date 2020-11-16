@@ -6,8 +6,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-const val TAG = "ManageActivity"
-
 class ManageActivity: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,10 +1,11 @@
-package to.pta.ado
+package to.pta.ado.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import to.pta.ado.R
 
 class SettingsFragment: Fragment() {
     override fun onCreateView(

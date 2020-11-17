@@ -1,8 +1,9 @@
-package to.pta.ado
+package to.pta.ado.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import to.pta.ado.R
 
 class ManageActivity: AppCompatActivity() {
 

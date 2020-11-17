@@ -1,5 +1,6 @@
 package to.pta.ado.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -29,5 +30,15 @@ class MainActivity : AppCompatActivity() {
             }
         })
         expandButton.post { bottomSheet.peekHeight = expandButton.measuredHeight }
+
+        findViewById<Button>(R.id.navigate_questions).setOnClickListener {
+            startActivity(Intent(this, ManageQuestionsActivity::class.java))
+        }
+        findViewById<Button>(R.id.navigate_stats).setOnClickListener {
+            startActivity(Intent(this, StatsActivity::class.java))
+        }
+        findViewById<Button>(R.id.navigate_settings).setOnClickListener {
+            startActivity(Intent(this, SettingsActivity::class.java))
+        }
     }
 }

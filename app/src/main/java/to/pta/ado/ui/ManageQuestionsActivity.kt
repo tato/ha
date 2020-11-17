@@ -9,43 +9,33 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.DialogFragment
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import to.pta.ado.R
 
-class ManageQuestionsFragment : Fragment() {
+class ManageQuestionsActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_manage_questions)
 
-    override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
-    ): View? {
-        val view = inflater.inflate(R.layout.fragment_manage_questions, container, false)
-
-        val recycler = view.findViewById<RecyclerView>(R.id.questions)
+        val recycler = findViewById<RecyclerView>(R.id.questions)
 
         val questionsAdapter = QuestionsAdapter(arrayListOf("Did you run?", "Did you sleep?", "Did you write?")) { dialog ->
-            activity?.let {
-                dialog.show(it.supportFragmentManager, "EditQuestionFragment")
-            } ?: throw IllegalStateException("Activity can't be null at View creation time")
+            dialog.show(supportFragmentManager, "EditQuestionFragment")
         }
         recycler.adapter = questionsAdapter
-        recycler.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+        recycler.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
 
-        val fab = view.findViewById<FloatingActionButton>(R.id.fab)
+        val fab = findViewById<FloatingActionButton>(R.id.fab)
         fab.setOnClickListener {
             questionsAdapter.addQuestion("")
             // TODO when I'm saving daily data, I need to migrate old data from this question to the new formulation somehow
             val dialog = EditQuestionFragment(questionsAdapter, questionsAdapter.itemCount - 1)
-            activity?.let {
-                dialog.show(it.supportFragmentManager, "EditQuestionFragment")
-            } ?: throw IllegalStateException("Activity can't be null at View creation time")
+            dialog.show(supportFragmentManager, "EditQuestionFragment")
         }
-
-        return view
     }
 
 

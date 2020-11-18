@@ -2,7 +2,6 @@ package to.pta.ado.ui
 
 import android.app.Dialog
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -42,7 +41,7 @@ class ManageQuestionsActivity : AppCompatActivity() {
 
         val fab = findViewById<FloatingActionButton>(R.id.fab)
         fab.setOnClickListener {
-            val q = Question(0, "")
+            val q = Question(null, "")
             val dialog = EditQuestionFragment(q) { db.questionDao().insert(it) }
             dialog.show(supportFragmentManager, "EditQuestionFragment")
         }
@@ -85,13 +84,19 @@ class ManageQuestionsActivity : AppCompatActivity() {
                         .inflate(R.layout.dialog_edit_question, null)
                 val questionTextView = dialogView.findViewById<EditText>(R.id.question_text)
                 questionTextView.setText(question.question, TextView.BufferType.EDITABLE)
-                AlertDialog.Builder(it)
-                        .setView(dialogView)
-                        .setPositiveButton("Save") { _, _ ->
-                            question.question = questionTextView.text.toString()
-                            save(question)
-                        }
-                        .create()
+                var builder = AlertDialog.Builder(it)
+                    .setView(dialogView)
+                    .setPositiveButton("Save") { _, _ ->
+                        question.question = questionTextView.text.toString()
+                        save(question)
+                    }
+                if (question.id != null) {
+                    builder = builder.setNegativeButton("Delete") { _, _ ->
+                        question.deleted = true
+                        save(question)
+                    }
+                }
+                builder.create()
             } ?: throw IllegalStateException("Activity cannot be null")
         }
     }

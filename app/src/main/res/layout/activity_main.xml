@@ -4,14 +4,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/colorOnPrimary"
-    tools:context=".ui.MainActivity">
+    tools:context=".ui.HomeActivity">
 
-    <TextView
-        android:id="@+id/textView2"
+    <Button
+        android:id="@+id/button_start_debug"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Hello World!" />
+        android:text="Start Debug"
+        tools:ignore="HardcodedText" />
+
+    <include
+        layout="@layout/yes_no_question"
+        android:id="@+id/yes_no_question"
+        android:visibility="gone" />
 
     <include layout="@layout/bottom_navigation_drawer"/>
 

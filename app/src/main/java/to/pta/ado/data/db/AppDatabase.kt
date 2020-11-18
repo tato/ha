@@ -11,7 +11,6 @@ import to.pta.ado.data.model.Question
 @Database(entities = [Question::class, Answer::class], version = 1, exportSchema = false)
 @TypeConverters(DbConverters::class)
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun questionDao(): QuestionDao
     companion object {
         @Volatile private var instance: AppDatabase? = null
         fun getInstance(context: Context): AppDatabase {
@@ -38,4 +37,6 @@ abstract class AppDatabase : RoomDatabase() {
             }
         }
     }
+    abstract fun questionDao(): QuestionDao
+    abstract fun answerDao(): AnswerDao
 }

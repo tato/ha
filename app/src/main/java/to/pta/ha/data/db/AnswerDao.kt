@@ -1,8 +1,8 @@
-package to.pta.ado.data.db
+package to.pta.ha.data.db
 
 import androidx.room.Dao
 import androidx.room.Insert
-import to.pta.ado.data.model.Answer
+import to.pta.ha.data.model.Answer
 
 @Dao
 interface AnswerDao {

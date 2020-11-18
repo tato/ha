@@ -1,10 +1,9 @@
-package to.pta.ado.ui.questions
+package to.pta.ha.ui.questions
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
-import to.pta.ado.data.db.AppDatabase
-import to.pta.ado.data.model.Question
+import to.pta.ha.data.db.AppDatabase
+import to.pta.ha.data.model.Question
 
 class ManageQuestionsViewModel(db: AppDatabase): ViewModel() {
     val questions: LiveData<List<Question>> = db.questionDao().getAll()

@@ -1,8 +1,7 @@
-package to.pta.ado.data.db
+package to.pta.ha.data.db
 
 import androidx.room.TypeConverter
 import java.time.LocalDate
-import java.time.temporal.TemporalAccessor
 
 class DbConverters {
     @TypeConverter

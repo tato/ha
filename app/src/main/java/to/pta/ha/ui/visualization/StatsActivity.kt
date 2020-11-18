@@ -1,4 +1,4 @@
-package to.pta.ado.ui.visualization
+package to.pta.ha.ui.visualization
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,10 +9,10 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import to.pta.ado.R
-import to.pta.ado.data.db.AppDatabase
-import to.pta.ado.data.model.QuestionWithAnswers
-import to.pta.ado.ui.AppViewModelFactory
+import to.pta.ha.R
+import to.pta.ha.data.db.AppDatabase
+import to.pta.ha.data.model.QuestionWithAnswers
+import to.pta.ha.ui.AppViewModelFactory
 
 class StatsActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

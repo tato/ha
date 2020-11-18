@@ -1,4 +1,4 @@
-package to.pta.ado.data.model
+package to.pta.ha.data.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

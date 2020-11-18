@@ -1,9 +1,9 @@
-package to.pta.ado.data.db
+package to.pta.ha.data.db
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import to.pta.ado.data.model.Question
-import to.pta.ado.data.model.QuestionWithAnswers
+import to.pta.ha.data.model.Question
+import to.pta.ha.data.model.QuestionWithAnswers
 
 @Dao
 interface QuestionDao {

@@ -1,4 +1,4 @@
-package to.pta.ado.ui.questions
+package to.pta.ha.ui.questions
 
 import android.app.Dialog
 import android.os.Bundle
@@ -15,10 +15,10 @@ import androidx.fragment.app.DialogFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import to.pta.ado.R
-import to.pta.ado.data.db.AppDatabase
-import to.pta.ado.data.model.Question
-import to.pta.ado.ui.AppViewModelFactory
+import to.pta.ha.R
+import to.pta.ha.data.db.AppDatabase
+import to.pta.ha.data.model.Question
+import to.pta.ha.ui.AppViewModelFactory
 
 class ManageQuestionsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

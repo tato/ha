@@ -7,7 +7,7 @@ import to.pta.ado.data.model.QuestionWithAnswers
 
 @Dao
 interface QuestionDao {
-    @Query("SELECT * FROM questions")
+    @Query("SELECT * FROM questions WHERE NOT deleted")
     fun getAll(): LiveData<List<Question>>
 
 //    @Transaction

@@ -6,8 +6,8 @@ import java.time.LocalDate
 
 @Entity(tableName = "answers")
 data class Answer(
-    @PrimaryKey val id: Int,
-    val answer: String,
+    @PrimaryKey(autoGenerate = true) val id: Int? = null,
+    val yesNoAnswer: Boolean?,
     val time: LocalDate,
     val questionId: Int,
 )

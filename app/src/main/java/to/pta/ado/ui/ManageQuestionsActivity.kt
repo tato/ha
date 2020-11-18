@@ -27,7 +27,7 @@ class ManageQuestionsActivity : AppCompatActivity() {
         val recycler = findViewById<RecyclerView>(R.id.questions)
 
         val db = AppDatabase.getInstance(this)
-        val model: ManageQuestionsViewModel by viewModels { ManageQuestionsViewModel.Factory(db) }
+        val model: ManageQuestionsViewModel by viewModels { AppViewModelFactory(db) }
         val questionsAdapter = QuestionsAdapter(ArrayList(), db) { dialog ->
             dialog.show(supportFragmentManager, "EditQuestionFragment")
         }

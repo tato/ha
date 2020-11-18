@@ -7,4 +7,7 @@
     <string name="add_a_new_question">Add a new question</string>
     <string name="question_dialog_hint">Question</string>
     <string name="expand_bottom_drawer_hint">Expand bottom drawer</string>
+    <string name="ask_question_yes">Yes</string>
+    <string name="ask_question_n">No</string>
+    <string name="ask_question_yes_no_placeholder">[Did you do it?]</string>
 </resources>

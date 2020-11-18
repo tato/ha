@@ -1,4 +1,4 @@
-package to.pta.ado.ui
+package to.pta.ado.ui.questions
 
 import android.app.Dialog
 import android.os.Bundle
@@ -18,6 +18,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import to.pta.ado.R
 import to.pta.ado.data.db.AppDatabase
 import to.pta.ado.data.model.Question
+import to.pta.ado.ui.AppViewModelFactory
 
 class ManageQuestionsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,9 +55,9 @@ class ManageQuestionsActivity : AppCompatActivity() {
 
 
     class QuestionsAdapter(
-            var questions: List<Question>,
-            private val db: AppDatabase,
-            private val showDialog: (EditQuestionFragment) -> Unit,
+        var questions: List<Question>,
+        private val db: AppDatabase,
+        private val showDialog: (EditQuestionFragment) -> Unit,
     ) : RecyclerView.Adapter<QuestionsViewHolder>() {
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): QuestionsViewHolder {

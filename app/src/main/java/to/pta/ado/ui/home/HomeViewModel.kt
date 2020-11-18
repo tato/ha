@@ -1,4 +1,4 @@
-package to.pta.ado.ui
+package to.pta.ado.ui.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

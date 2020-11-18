@@ -8,6 +8,6 @@ import java.time.LocalDate
 data class Answer(
     @PrimaryKey(autoGenerate = true) val id: Int? = null,
     val yesNoAnswer: Boolean?,
-    val time: LocalDate,
+    val date: LocalDate,
     val questionId: Int,
 )

@@ -10,9 +10,9 @@ interface QuestionDao {
     @Query("SELECT * FROM questions WHERE NOT deleted")
     fun getAll(): LiveData<List<Question>>
 
-//    @Transaction
-//    @Query("SELECT * FROM questions")
-//    fun getQuestionsWithAnswers(): List<QuestionWithAnswers>
+    @Transaction
+    @Query("SELECT * FROM questions WHERE NOT deleted")
+    fun getQuestionsWithAnswers(): LiveData<List<QuestionWithAnswers>>
 
     @Insert
     fun insert(question: Question): Long

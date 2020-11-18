@@ -1,7 +1,6 @@
-package to.pta.ado.ui
+package to.pta.ado.ui.home
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
@@ -11,6 +10,7 @@ import to.pta.ado.R
 import to.pta.ado.data.db.AppDatabase
 import to.pta.ado.data.model.Answer
 import to.pta.ado.data.model.Question
+import to.pta.ado.ui.AppViewModelFactory
 import java.time.LocalDate
 
 class HomeActivity : AppCompatActivity() {

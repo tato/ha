@@ -1,4 +1,4 @@
-package to.pta.ado.ui.home
+package to.pta.ha.ui.home
 
 import android.os.Bundle
 import android.view.View
@@ -6,11 +6,11 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import to.pta.ado.R
-import to.pta.ado.data.db.AppDatabase
-import to.pta.ado.data.model.Answer
-import to.pta.ado.data.model.Question
-import to.pta.ado.ui.AppViewModelFactory
+import to.pta.ha.R
+import to.pta.ha.data.db.AppDatabase
+import to.pta.ha.data.model.Answer
+import to.pta.ha.data.model.Question
+import to.pta.ha.ui.AppViewModelFactory
 import java.time.LocalDate
 
 class HomeActivity : AppCompatActivity() {

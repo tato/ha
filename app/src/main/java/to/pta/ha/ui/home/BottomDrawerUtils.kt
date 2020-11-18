@@ -1,4 +1,4 @@
-package to.pta.ado.ui.home
+package to.pta.ha.ui.home
 
 import android.content.Intent
 import android.view.View
@@ -6,10 +6,10 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import to.pta.ado.R
-import to.pta.ado.ui.questions.ManageQuestionsActivity
-import to.pta.ado.ui.SettingsActivity
-import to.pta.ado.ui.visualization.StatsActivity
+import to.pta.ha.R
+import to.pta.ha.ui.questions.ManageQuestionsActivity
+import to.pta.ha.ui.SettingsActivity
+import to.pta.ha.ui.visualization.StatsActivity
 
 class BottomDrawerUtils {
     companion object {

@@ -1,12 +1,8 @@
-package to.pta.ado.ui
+package to.pta.ha.ui
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
-import to.pta.ado.R
+import to.pta.ha.R
 
 class SettingsActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

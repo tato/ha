@@ -1,4 +1,4 @@
-package to.pta.ado
+package to.pta.ha
 
 import org.junit.Test
 

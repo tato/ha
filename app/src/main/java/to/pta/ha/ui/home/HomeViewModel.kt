@@ -1,10 +1,10 @@
-package to.pta.ado.ui.home
+package to.pta.ha.ui.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import to.pta.ado.data.db.AppDatabase
-import to.pta.ado.data.model.Question
+import to.pta.ha.data.db.AppDatabase
+import to.pta.ha.data.model.Question
 
 class HomeViewModel(db: AppDatabase): ViewModel() {
 

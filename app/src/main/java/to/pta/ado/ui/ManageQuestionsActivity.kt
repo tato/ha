@@ -24,7 +24,6 @@ class ManageQuestionsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_manage_questions)
-        BottomDrawerUtils.startBottomNavigationDrawer(this)
 
         val recycler = findViewById<RecyclerView>(R.id.questions)
 

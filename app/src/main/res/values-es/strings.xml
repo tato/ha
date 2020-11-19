@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="manage_button">Gestionar opciones</string>
+    <string name="bottom_navigation_questions">Preguntas</string>
+    <string name="bottom_navigation_statistics">Estadísticas</string>
+    <string name="bottom_navigation_settings">Opciones</string>
+    <string name="add_a_new_question">Añadir pregunta nueva</string>
+    <string name="question_dialog_hint">Pregunta</string>
+    <string name="expand_bottom_drawer_hint">Expandir menú inferior</string>
+    <string name="ask_question_yes">Sí</string>
+    <string name="ask_question_n">No</string>
+    <string name="ask_question_yes_no_placeholder">[¿Hiciste esto?]</string>
+</resources>
